@@ -15,6 +15,8 @@
 <footer class="footer">
 	<div class="footer__in">
 		<div class="footer__row">
+			<!-- <a href="/" class="footer__logo logo logo_dark">Webjeb</a> -->
+
 			<ul class="footer__social social">
 				<li class="social__item social__item_youtube">
 					<a href="//goo.gl/qAALbI" class="social__link">Youtube</a>

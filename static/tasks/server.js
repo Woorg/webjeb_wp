@@ -17,6 +17,7 @@ gulp.task('server', () => (
 			}
 		},
 		proxy: 'webjeb.local',
+		injectChanges: true,
 		// server: {
 		// 	baseDir: [
 		// 		'app/resources',

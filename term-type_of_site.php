@@ -18,7 +18,7 @@ get_header('inner'); ?>
 
 	<!-- begin recent-works-->
 	<section class="recent-works section">
-		<h2 class="recent-works__title"><?php the_archive_title('', ''); ?></h2>
+		<h2 class="recent-works__title">Портфолио <span><?php single_term_title(); ?></span></h2>
 		<!-- <p class="recent-works__text">Несколько слов о недавних работах</p> -->
 		<?php wp_nav_menu( array(
 			'theme_location' => 'menu-2',

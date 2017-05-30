@@ -45,14 +45,22 @@ get_header('inner'); ?>
 					<?php $tools = get_field('tools_used'); ?>
 
 					<dl class="portfolio-single__list">
+
+						<?php if ($tools) { ?>
+						<div class="portfolio-single__item">
+							<dt class="portfolio-single__term">Тип сайта</dt>
+							<dd class="portfolio-single__desc">
+								<?php the_terms($post->id, 'type_of_site'); ?>
+							</dd>
+						</div>
+						<?php } ?>
+
 						<?php if ($tools) { ?>
 						<div class="portfolio-single__item">
 							<dt class="portfolio-single__term">Используемые технологии</dt>
-							<?php // for ($i=0; $i < count($tools); $i++) { ?>
 							<dd class="portfolio-single__desc">
 								<?php the_terms($post->id, 'tools'); ?>
 							</dd>
-							<? // } ?>
 						</div>
 						<?php } ?>
 

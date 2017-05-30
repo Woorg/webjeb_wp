@@ -16,17 +16,23 @@ get_header('inner'); ?>
 		}
 	?>
 
-
-
 	<!-- begin recent-works-->
 	<section class="recent-works section">
-		<h2 class="recent-works__title">Портфолио</h2>
+		<h1 class="recent-works__title">Портфолио <?php // single_cat_title( '', false  ); ?></h1>
 		<!-- <p class="recent-works__text">Несколько слов о недавних работах</p> -->
 		<?php wp_nav_menu( array(
 			'theme_location' => 'menu-2',
 			'menu_id' => '',
 			'container' => '',
 			'menu_class' => 'list-filter'
+
+		) ); ?>
+
+		<?php wp_nav_menu( array(
+			'theme_location' => 'menu-4',
+			'menu_id' => '',
+			'container' => '',
+			'menu_class' => 'list-filter list-filter_second'
 
 		) ); ?>
 

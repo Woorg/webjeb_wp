@@ -1,6 +1,8 @@
 .list-filter
 	margin-bottom 12px
 	text-align left
+
+
 .list-filter__item
 	margin-right 20px
 	margin-right 1.25rem
@@ -20,4 +22,20 @@
 	a
 		@extends .selector
 		@extends .transition
+
+
+.list-filter
+	&.list-filter_second
+		.list-filter__item
+			&.current-menu-item
+				a
+					// border-color #212121
+					// background #212121
+					color #fff
+
+		a
+			@extends .selector-clean
+			border none
+			@extends .transition
+
 

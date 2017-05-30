@@ -24,8 +24,6 @@
 		<meta name="HandheldFriendly" content="True">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="address=no">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
 		<script>
 			document.getElementsByTagName('html')[0].className += ' js';
 		</script>
