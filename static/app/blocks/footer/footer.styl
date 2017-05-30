@@ -1,0 +1,45 @@
+.footer
+	&__in
+		@extends .in
+		padding-top 80px
+		padding-bottom 80px
+		color #000
+		clearfix()
+		+below($tablet)
+			padding-top (80px / 1.2)
+			padding-bottom (80px / 1.2)
+	&__row
+		border-bottom 1px solid rgba(0,0,0, .1)
+		position relative
+		margin-bottom 50px
+		padding-bottom 50px
+		+below($mobile)
+			text-align center
+	&__logo,
+	&__nav
+		@extends .ib
+	&__logo
+		margin-right 10px
+		+below($mobile)
+			margin-bottom 30px
+	&__nav
+		margin-left 218px
+		@extends .transition
+		+below($tablet)
+			margin-left 0
+	&__social
+		position absolute
+		top 0
+		right 0
+		font-size 14px
+		text-transform uppercase
+		+below($mobile)
+			position relative
+			text-align center
+	&__copyright
+		float right
+		span
+			font-size 12px
+		+below($mobile)
+			float none
+			text-align center

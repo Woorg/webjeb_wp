@@ -1,0 +1,23 @@
+.list-filter
+	margin-bottom 12px
+	text-align left
+.list-filter__item
+	margin-right 20px
+	margin-right 1.25rem
+	margin-bottom 12px
+	@extends .ib
+	&:first-child
+		margin-left 0
+		// a
+		// 	border-color #212121
+		// 	background #212121
+		// 	color #fff
+	&.current-menu-item
+		a
+			border-color #212121
+			background #212121
+			color #fff
+	a
+		@extends .selector
+		@extends .transition
+

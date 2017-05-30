@@ -1,0 +1,36 @@
+{
+  "name": "wp",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for Olympos WordPress theme",
+  "scripts": {
+    "start": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandoric/olympos.git"
+  },
+  "author": "Ivan Dorić",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.13.0",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-plumber-error-handler": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylus": "^2.6.0",
+    "rupture": "^0.6.2",
+    "stylus-import-if-exist": "^1.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ivandoric/olympos/issues"
+  },
+  "homepage": "https://github.com/ivandoric/olympos#readme",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}

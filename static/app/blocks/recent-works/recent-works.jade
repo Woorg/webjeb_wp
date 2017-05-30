@@ -1,0 +1,78 @@
+include ../list-filter/list-filter
+
+mixin recent-works()
+	// begin recent-works
+	section.recent-works.section
+		.recent-works__in
+			h2.recent-works__title Недавние работы
+			p.recent-works__text Несколько недавних работ
+			ul.recent-works__list
+				li.recent-works__item
+					a.recent-works__image(href="#link")
+						img(src="assets/images/content/avgroup.jpg", alt="")
+					.recent-works__item-title Avggroup
+					.recent-works__cat
+						a.recent-works__cat-link(href="#link") адаптивная верстка
+				li.recent-works__item
+					a.recent-works__image(href="")
+						img(src="assets/images/content/la-rose.jpg", alt="")
+					.recent-works__item-title La-rose
+					.recent-works__cat
+						a.recent-works__cat-link(href="#link") адаптивная верстка
+				li.recent-works__item
+					a.recent-works__image(href="")
+						img(src="assets/images/content/ggvision.jpg", alt="")
+					.recent-works__item-title Ggvision
+					.recent-works__cat
+						a.recent-works__cat-link(href="#link") адаптивная верстка
+						a.recent-works__cat-link(href="#link") интеграция с wordpress
+
+				li.recent-works__item
+					a.recent-works__image(href="")
+						img(src="assets/images/content/bureau-skatchkova.jpg", alt="")
+					.recent-works__item-title Бюро ремонта
+					.recent-works__cat
+						a.recent-works__cat-link(href="#link") адаптивная верстка
+
+			a.recent-works__button.button(href="#link") посмотреть еще
+
+	// end recent-works
+
+mixin recent-works-second()
+
+	// begin recent-works
+	section.recent-works.section
+		h2.recent-works__title Портфолио
+		p.recent-works__text Несколько слов о недавних работах
+
+		+list-filter()
+
+		ul.recent-works__list
+			li.recent-works__item
+				a.recent-works__image(href="#link")
+					img(src="assets/images/content/avgroup.jpg", alt="")
+				.recent-works__item-title Avggroup
+				.recent-works__cat
+					a.recent-works__cat-link(href="#link") адаптивная верстка
+			li.recent-works__item
+				a.recent-works__image(href="")
+					img(src="assets/images/content/la-rose.jpg", alt="")
+				.recent-works__item-title La-rose
+				.recent-works__cat
+					a.recent-works__cat-link(href="#link") адаптивная верстка
+			li.recent-works__item
+				a.recent-works__image(href="")
+					img(src="assets/images/content/ggvision.jpg", alt="")
+				.recent-works__item-title Ggvision
+				.recent-works__cat
+					a.recent-works__cat-link(href="#link") адаптивная верстка
+					a.recent-works__cat-link(href="#link") интеграция с wordpress
+
+			li.recent-works__item
+				a.recent-works__image(href="")
+					img(src="assets/images/content/bureau-skatchkova.jpg", alt="")
+				.recent-works__item-title Бюро ремонта
+				.recent-works__cat
+					a.recent-works__cat-link(href="#link") адаптивная верстка
+
+	// end recent-works

@@ -1,0 +1,68 @@
+.recent-works
+	&__in
+		@extends .in
+		padding-top $section-padding-vert
+		padding-bottom $section-padding-vert
+		padding-left 0
+		padding-right 0
+		text-align center
+		+below($tablet)
+			padding-top ($section-padding-vert / 1.2)
+			padding-bottom ($section-padding-vert / 1.2)
+	&__title
+		margin-bottom 22px
+		@extends .title-h2
+		span
+			text-transform lowercase
+	&__text
+		margin-bottom 66px
+		color #000000
+	&__list
+		font-size 0
+	&__item
+		margin-right 30px
+		margin-right ratio-percentage(30,1140)
+		margin-bottom 50px
+		width 48%
+		@extends .ib
+		&:nth-child(2n)
+			margin-right 0
+		+below($tablet)
+			margin-right 0
+			width auto
+
+	&__image
+		margin-bottom 30px
+		display block
+		// width ratio-percentage(570,1140)
+		opacity 1
+		transition opacity .2s ease
+		+below($tablet)
+			width auto
+		&:hover
+			opacity .8
+		img
+			max-width 100%
+			height auto
+
+	&__item-title
+		margin-bottom 15px
+		font-family $al
+		font-size 20px
+		line-height 32px
+	&__cat
+		color #cccccc
+		a
+			display block
+			@extends .title-h3
+			color inherit
+			line-height 1.6
+
+			text-transform uppercase
+			text-decoration none
+
+			transition color .2s ease
+			&:hover
+				color darken(#cccccc, 10)
+	&__button
+		@extends .button_black

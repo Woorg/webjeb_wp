@@ -1,0 +1,20 @@
+.call-to-action
+	background transparent url('../images/general/call-to-action-bg.jpg') 50% 0 / cover no-repeat
+	&__in
+		@extends .in
+		padding-top $section-padding-vert
+		padding-bottom $section-padding-vert
+		text-align center
+		+below($tablet)
+			padding-top ($section-padding-vert / 1.2)
+			padding-bottom ($section-padding-vert / 1.2)
+
+	&__title
+		margin-bottom 45px
+		@extends .title-h1
+		color #FFF
+	&__button
+		@extends .button_white
+		font-family $am
+		// &:hover
+			// @extends .button_white-invert

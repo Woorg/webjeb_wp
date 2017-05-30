@@ -1,0 +1,38 @@
+.portfolio-single
+	display block
+
+	&__title,
+	&__text-title
+		margin-bottom 30px
+		@extends .title-h2
+	&__text
+		@extends .wysiwyg
+	// &__list
+	&__item
+		margin-bottom 20px
+		display inline-block
+		vertical-align top
+		width 33%
+		font-size 0
+	&__term,
+	&__desc
+		font-family $ar
+		font-size 14px
+		line-height 1.4
+		text-transform uppercase
+		a
+			border-bottom 1px solid lighten(#01579b, 60)
+			color #01579b
+			&:hover
+				border-bottom 1px solid transparent
+			// text-transform lowercase
+	&__term
+		margin-right 30px
+		margin-bottom 10px
+		// width 100px
+	&__desc
+		margin-right 10px
+		display inline-block
+		vertical-align top
+		text-transform lowercase
+		font-family $al

@@ -1,0 +1,40 @@
+extends /blocks/layout-inner/layout-inner
+
+include /blocks/icon/icon
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/content/content
+include /blocks/article-tile/article-tile
+include /blocks/pagination/pagination
+
+include /blocks/sidebar/sidebar
+include /blocks/side-nav/side-nav
+
+include /blocks/article-tile/article-tile
+
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Блог - Верстка psd, sketch, xd в html';
+
+block content
+	+header-inner()
+	main.main
+		+breadcrumbs-blog()
+
+		+content()
+			+article-tile()
+			+article-tile()
+			+pagination()
+		// end content
+
+		+sidebar()
+			+side-nav()
+		// end sidebar
+		.page__buffer
+	// end main
+
+	+footer()

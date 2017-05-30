@@ -1,0 +1,30 @@
+.h-contacts
+	padding-left 36px
+	font-family $al
+	font-size 12px
+	text-transform uppercase
+	&__icon
+		position absolute
+		top 50%
+		left 0
+		margin-top -12px
+		width 26px
+		height 26px
+		fill #fff
+	&__email,
+	&__phone
+		display block
+		color #FFF
+		line-height 1.6
+		text-decoration none
+		text-transform lowercase
+		@extends .underline
+		letter-spacing tracking(100)
+		span
+			padding-right 6px
+			text-transform lowercase
+
+
+.is-inverted
+	.h-contacts__icon
+		fill #000

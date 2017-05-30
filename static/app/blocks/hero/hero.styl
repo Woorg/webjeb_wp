@@ -1,0 +1,43 @@
+.hero
+	position relative
+	background transparent url('../images/general/hero-bg-2.jpg') 50% 0 / cover no-repeat
+	&__in
+		@extends .in
+		position relative
+		min-height 940px
+		color #FFF
+		@extends .transition
+		+below($tablet)
+			min-height 800px
+		+below($mobile)
+			display block
+			padding-top 140px
+			padding-bottom 60px
+	&__w
+		position absolute
+		top 50%
+		left 15px
+		transform translateY(-50%)
+	&__title
+		margin-bottom 40px
+		@extends .title-h1
+		letter-spacing 0
+		+below($tablet)
+			margin-bottom 20px
+	&__text
+		margin-bottom 63px
+		padding-right 240px
+		font-family $at
+		font-size 20px
+		line-height 32px
+		+below($tablet)
+			margin-bottom 31px
+			padding-right 0
+			font-size 17px
+
+
+	&__button
+		@extends .button_big
+		&:hover
+			@extends .button_invert
+

@@ -1,0 +1,107 @@
+.header
+	position absolute
+	z-index 1
+	top 0
+	left 0
+	width 100%
+	background transparent
+	will-change transform
+	&__in
+		position relative
+		@extends .in
+		padding-top 10px
+		padding-bottom 20px
+		font-size 0
+		clearfix()
+		+below($tablet)
+			padding-top 10px
+			padding-bottom 20px
+.is-inner
+	background #212121
+
+.is-fixed
+	position fixed
+	animation .4s nav-appears .3s ease both
+
+.is-static
+	animation .2s nav-revealed .3s ease both
+
+.is-inverted
+	border-bottom 1px solid rgba(0,0,0,.1)
+	background rgba(255,255,255,.97)
+	.nav__icon,
+	.h-contacts__icon
+		fill #212121
+	.nav__item a,
+	.h-contacts__email,
+	.h-contacts__phone
+		color #212121
+		&:after
+			background #212121
+	.nav__item a
+		+below($tablet)
+			&:after
+				background #FFF
+	.logo
+		color #212121
+		&:after
+			retinaSprite($logo_icon_dark_group)
+
+// .is-inner
+// 	background #212121
+
+
+
+.header__logo,
+.header__nav,
+.header__button
+	@extends .ib
+
+.header__logo
+	margin-top 14px
+	+below($tablet)
+		margin-right 10px
+
+.header__nav
+	margin-left 218px
+	margin-left ratio-percentage(218,1140)
+	margin-top 14px
+	@extends .transition
+	+below($tablet)
+		margin-left 0
+
+.header__button
+	float right
+	@extends .button_mid
+
+.header__contacts
+	position absolute
+	top 14px
+	right 15px
+	+below(442px)
+		position relative
+		top 0
+		right auto
+		margin-top 20px
+
+
+@keyframes nav-appears
+	0%
+		transform translate(0, -100px)
+	90%
+		transform translate(0, 1px)
+	100%
+		transform translateY(0%)
+
+@keyframes nav-revealed
+	0%
+		transform translateY(-40px)
+	90%
+		transform translateY(1px)
+	100%
+		transform translate(0, 0)
+
+
+
+
+

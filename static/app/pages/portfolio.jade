@@ -1,0 +1,24 @@
+extends /blocks/layout-inner/layout-inner
+
+include /blocks/icon/icon
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/recent-works/recent-works
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Портфолио - Верстка psd, sketch, xd в html';
+
+block content
+	+header-inner()
+	main.main
+		+breadcrumbs()
+		+recent-works-second()
+
+		.page__buffer
+	// end main
+
+	+footer()

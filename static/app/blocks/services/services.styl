@@ -1,0 +1,68 @@
+.services
+	&__in
+		@extends .in
+		padding-top $section-padding-vert
+		padding-bottom $section-padding-vert
+		text-align center
+		+below($tablet)
+			padding-top ($section-padding-vert / 1.2)
+			padding-bottom ($section-padding-vert / 1.2)
+	&__title
+		margin-bottom 90px
+		@extends .title-h2
+		color #141414
+		text-align center
+		+below($tablet)
+			margin-bottom (90px / 2)
+	&__list
+		padding-left 55px
+		padding-right 55px
+		font-size 0
+		@extends .transition
+		+below($tablet)
+			padding-left 0
+			padding-right 0
+			// display inline-block
+	&__item
+		position relative
+		margin-right 150px
+		margin-right ratio-percentage(150,1140)
+		margin-bottom 80px
+		padding-left 66px
+		@extends .ib
+		width 440px
+		width ratio-percentage(440,1140)
+		text-align left
+		&:nth-child(2n)
+			margin-right 0
+		&.services__item_2
+			padding-left 72px
+		+below($tablet)
+			margin-right 0
+			display block
+			width auto
+			&:last-child
+				margin-bottom 0
+	&__item-title
+		margin-bottom 23px
+		font-family $al
+		font-size 20px
+		line-height 32px
+	&__item-text
+		font-size 16px
+		line-height 26px
+	&__item-icon
+		position absolute
+		top 0
+		left 0
+	&__item-icon_1
+		width 30px
+		height 50px
+	&__item-icon_2
+		width 56px
+		height 48px
+	&__item-icon_3
+		width 48px
+		height 48px
+
+

@@ -1,0 +1,230 @@
+// General body styles
+
+.page
+	font-family $at
+	font-size 16px
+	color #212121
+	transition font-size .3s ease
+
+// Container
+
+.in
+	margin auto
+	padding-left 15px
+	padding-right 15px
+	max-width 1170px
+	min-width 320px
+
+// Sticky footer
+html, body
+	height 100%
+
+.main
+	// margin-bottom -135px
+	min-height 100%
+* html .main
+	height 100%
+
+// .page__buffer
+// 	height 135px
+
+
+// Links
+
+a:link
+	text-decoration none
+
+
+// Titles
+
+.title-h1
+	font-family $at
+	font-size 62px
+	line-height 72px
+	transition all .2s ease
+	+below($tablet)
+		font-size 42px
+		line-height 60px
+	+below(442px)
+		font-size 32px
+		line-height 50px
+
+.title-h2
+	font-family $at
+	font-size 42px
+	line-height 52px
+	transition all .2s ease
+	+below($tablet)
+		font-size 35px
+.title-h3
+	font-family $al
+	font-size 16px
+	line-height 32px
+	text-transform uppercase
+	letter-spacing tracking(150)
+	transition all .2s ease
+
+.title-h4
+	font-family $al
+	font-size 16px
+	line-height 32px
+	text-transform lowercase
+	transition all .2s ease
+	// letter-spacing tracking(150)
+
+// General buttons
+
+.button
+	border 1px solid #fff
+	display inline-block
+	vertical-align top
+	background transparent
+	color #FFF
+	font-size 12px
+	line-height 1
+	text-decoration none
+	text-transform uppercase
+	letter-spacing tracking(150)
+	border-radius 3px
+	transition all .2s ease
+	opacity 1
+	will-change all
+	&:hover
+		opacity .95
+	&_mid
+		padding-top 16px
+		padding-right 20px
+		padding-bottom 16px
+		padding-left 20px
+		font-family $al
+	&_big
+		padding-top 26px
+		padding-right 35px
+		padding-bottom 26px
+		padding-left 35px
+		font-family $ab
+	&_black
+		padding-top 20px
+		padding-right 50px
+		padding-bottom 20px
+		padding-left 50px
+		font-family $al
+		color #FFF
+		background #212121
+	&_white
+		padding-top 25px
+		padding-right 50px
+		padding-bottom 25px
+		padding-left 50px
+		background #FFF
+		font-family $al
+		color #212121
+	&_invert
+		background #FFF
+		color #212121
+	&_white-invert
+		border 1px solid #212121
+		background #212121
+		color #fff
+
+// Transition
+
+.transition
+	transition all .2s ease
+
+// Inline block
+
+.ib
+	display inline-block
+	vertical-align top
+
+// Links underline
+
+.underline
+	position relative
+	&:after
+		position absolute
+		top 100%
+		left 50%
+		right 50%
+		height 1px
+		background #FFF
+		content ''
+		transition all .2s ease
+	&:hover
+		&:after
+			left 0
+			right 0
+
+
+// Selector button
+
+.selector
+	border 1px solid #dededf
+	padding-top 11px
+	padding-right 18px
+	padding-bottom 9px
+	padding-left 18px
+	display block
+	color #222328
+	font-family $al
+	font-size 11px
+	text-transform uppercase
+	text-decoration none
+	border-radius 20px
+	letter-spacing tracking(150)
+	&:hover
+		border-color #141414
+		background #141414
+		color #fff
+
+
+// Section fade
+
+section.section
+	&.fade-in
+		opacity 1
+		visibility visible
+		transition all .3s linear
+// .fade-out
+//     opacity 0
+//     visibility hidden
+//     transition visibility 0s linear, opacity 300ms linear
+
+
+
+
+// wysiwyg editor styles
+
+.wysiwyg
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		font-family $at
+		letter-spacing tracking(150)
+
+	h1
+		font-size 38px
+	h2
+		font-size 31px
+	h3
+		font-size 28px
+	h4
+		font-size 23px
+	h5
+		font-size 19px
+
+	p
+		margin-bottom 25px
+		font-family $al
+		font-size 18px
+		font-weight 200
+		line-height 1.56
+		text-align left
+		color rgba(20, 20, 20, 0.7)
+
+

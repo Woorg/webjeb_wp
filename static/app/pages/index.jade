@@ -1,0 +1,24 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/icon/icon
+
+include /blocks/header/header
+include /blocks/hero/hero
+include /blocks/services/services
+include /blocks/how/how
+include /blocks/recent-works/recent-works
+include /blocks/call-to-action/call-to-action
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Верстка psd, sketch, xd в html';
+
+block content
+	+header()
+	+hero()
+	+services()
+	+how()
+	+recent-works()
+	+call-to-action()
+	+footer()

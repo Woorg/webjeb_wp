@@ -1,0 +1,27 @@
+.article
+	margin-bottom (88px / 2)
+	display block
+	&__link
+		border-bottom 1px solid lighten(#01579b, 55)
+		color #01579b
+		@extends .transition
+	&__title
+		margin-bottom 40px
+		@extends .title-h2
+		color #212121
+		&:hover
+			.article__link
+				border-bottom 1px solid transparent
+		+below($tablet)
+			// font-size 30px
+			line-height 1.4
+
+	&__text
+		@extends .wysiwyg
+
+	&__img
+		margin-bottom 40px
+		background #efefef
+		img
+			max-width 100%
+			height auto

@@ -1,0 +1,61 @@
+mixin header()
+	// begin header
+	header.header
+		.header__in
+			a.header__logo.logo(href="#logo")
+				+icon('logo-1', true).logo__icon
+				| Webjeb
+
+			nav.header__nav.nav
+				label.nav__button(for="nav-button")
+					+icon('menu-icon-8', true).nav__icon
+				input.nav__trigger(type="checkbox", id="nav-button")
+
+				ul.nav__list
+					li.nav__item
+						a.nav__link(href="#portf") Портфолио
+					li.nav__item
+						a.nav__link(href="#blog") Блог
+			.header__contacts.h-contacts
+				+icon('message-icon', true).h-contacts__icon
+				a.h-contacts__email(href='skype:igor_gorlov')
+					span skype:
+					| igor_gorlov
+				a.h-contacts__phone(href='mailto: gorlov35@gmail.com?subject=Заказать верстку')
+					span email:
+					| gorlov35@gmail.com
+
+			//- button.header__button.button Написать
+
+	// end header
+
+
+mixin header-inner()
+	// begin header
+	header.header.is-inner
+		.header__in
+			a.header__logo.logo(href="#logo") Webjeb
+
+			nav.header__nav.nav
+
+				label.nav__button(for="nav-button")
+					+icon('menu-icon-8', true).nav__icon
+				input.nav__trigger(type="checkbox", id="nav-button")
+
+				ul.nav__list
+					li.nav__item
+						a.nav__link(href="#portf") Портфолио
+					li.nav__item
+						a.nav__link(href="#blog") Блог
+			.header__contacts.h-contacts
+				+icon('message-icon', true).h-contacts__icon
+				a.h-contacts__email(href='skype:igor_gorlov')
+					span skype:
+					| igor_gorlov
+				a.h-contacts__phone(href='mailto: gorlov35@gmail.com?subject=Заказать верстку')
+					span email:
+					| gorlov35@gmail.com
+
+			//- button.header__button.button Написать
+
+	// end header
