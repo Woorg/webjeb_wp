@@ -32,17 +32,14 @@ gulp.task('styles', () => (
 		}))
 		.pipe(postcss([
 			autoprefixer({browsers: [
-				'> 0.2%',
-				'last 8 versions',
-				'Firefox ESR',
-				'android 4',
-				'Firefox < 20'
+				'> 1%',
+				'last 2 versions'
 			]}),
 			cssnano({zindex: false}),
-			mqpacker(),
+			mqpacker()
 			// oldie(),
-			postcssfixes(),
-			dib()
+			// postcssfixes(),
+			// dib()
 		]))
 		// .pipe(gulpIf(!isDebug, gcmq()))
 		// .pipe(gulpIf(!isDebug, nano({zindex: false})))

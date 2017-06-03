@@ -8,42 +8,33 @@
  */
 ?>
 
-<nav class="side-nav sidebar__block">
-	<div class="sidebar__title">Категории</div>
+<div class="sidebar__w">
 
-	<?php wp_nav_menu( array(
-		'theme_location' => 'menu-3',
-		'menu_id' => '',
-		'container' => '',
-		'menu_class' => 'side-nav__list'
+	<nav class="side-nav sidebar__block">
+		<div class="sidebar__title">Категории</div>
 
-
-	) ); ?>
-
-
-	<!-- <ul class="side-nav__list">
-		<li class="side-nav__item">
-			<a href="#link" class="side-nav__link">Html верстка</a>
-		</li>
-		<li class="side-nav__item">
-			<a href="#link" class="side-nav__link">Cms Wordpress</a>
-		</li>
-		<li class="side-nav__item">
-			<a href="#link" class="side-nav__link">СМS "1С- Битрикс: Управление сайтом"</a>
-		</li>
-	</ul> -->
-</nav>
+		<?php wp_nav_menu( array(
+			'theme_location' => 'menu-3',
+			'menu_id' => '',
+			'container' => '',
+			'menu_class' => 'side-nav__list'
 
 
-<?php
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		return;
-	}
-?>
+		) ); ?>
 
 
+	</nav>
+
+	<div class="sidebar__block">
+
+	</div>
 
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+	<?php
+		if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+			return;
+		}
+	?>
+
+
+</div>

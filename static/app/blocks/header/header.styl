@@ -1,10 +1,10 @@
 .header
-	position absolute
-	z-index 1
+	position fixed
+	z-index 2
 	top 0
 	left 0
 	width 100%
-	background transparent
+	// background #0f0f11
 	will-change transform
 	&__in
 		position relative
@@ -16,8 +16,6 @@
 		+below($tablet)
 			padding-top 10px
 			padding-bottom 20px
-.is-inner
-	background #212121
 
 .is-fixed
 	position fixed
@@ -47,8 +45,11 @@
 		&:after
 			retinaSprite($logo_icon_dark_group)
 
-// .is-inner
-// 	background #212121
+
+.is-hide
+	display none
+.is-show
+	display block
 
 
 
@@ -67,7 +68,9 @@
 	margin-left ratio-percentage(218,1140)
 	margin-top 14px
 	@extends .transition
-	+below($tablet)
+	+below(1100px)
+		margin-left 30px
+	+below(768px)
 		margin-left 0
 
 .header__button

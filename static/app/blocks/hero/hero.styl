@@ -4,11 +4,11 @@
 	&__in
 		@extends .in
 		position relative
-		min-height 940px
+		min-height 890px
 		color #FFF
 		@extends .transition
 		+below($tablet)
-			min-height 800px
+			min-height 890px
 		+below($mobile)
 			display block
 			padding-top 140px
@@ -17,16 +17,27 @@
 		position absolute
 		top 50%
 		left 15px
+		// right 15px
+		width 75%
 		transform translateY(-50%)
+		+below(1024px)
+			width 70%
+		+below(768px)
+			width 80%
+		+below(425px)
+			right 15px
+			width auto
+
 	&__title
 		margin-bottom 40px
+		// padding-right 470px
 		@extends .title-h1
 		letter-spacing 0
 		+below($tablet)
 			margin-bottom 20px
 	&__text
 		margin-bottom 63px
-		padding-right 240px
+		// padding-right 450px
 		font-family $at
 		font-size 20px
 		line-height 32px

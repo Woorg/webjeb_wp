@@ -44,34 +44,39 @@
 .nav-next
 	position relative
 	margin-bottom 10px
-	padding-left 30px
 	float left
 	+below($tablet)
 		float none
-
-	&:after
-		position absolute
-		top 50%
-		left 0
-		margin-top -9px
-		content "←"
-		font-family $ar
-		font-size 16px
-		line-height 1
+	a
+		position relative
+		padding-left 30px
+		display inline-block
+		&:after
+			position absolute
+			top 50%
+			left 0
+			margin-top -9px
+			content "←"
+			font-family $ar
+			font-size 16px
+			line-height 1
 
 .nav-next
-	padding-right 30px
-	padding-left 0
 	float right
-	&:after
-		right 0
-		left auto
-		content "→"
+	a
+		padding-left 0
+		padding-right 30px
+		&:after
+			right 0
+			left auto
+			content "→"
 
 	+below($tablet)
-		padding-right 0
-		padding-left 30px
 		float none
-		&:after
-			right auto
-			left 0
+		a
+			padding-right 0
+			padding-left 30px
+
+			&:after
+				right auto
+				left 0

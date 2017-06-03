@@ -8,7 +8,7 @@
 					<div class="hero__text">
 						<p> Здравствуйте, я частный вебмастер и я занимаюсь адаптивной html версткой и интеграцией верстки с CMS Wordpress и СМS 1С- Битрикс: Управление сайтом. Пишу чистый код используя методологию БЭМ.<br/>Думаю об отображении в разных браузерах и на разных устройствах. Забочусь о скорости <br/>загрузки и дальнейшем SEO-продвижении.</p>
 					</div>
-					<a href="mailto: gorlov35@gmail.com?subject=Заказать верстку" class="hero__button button">Заказать верстку</a>
+					<a href="mailto: gorlov35@gmail.com?subject=Заказать верстку" class="hero__button button button">Заказать верстку</a>
 				</div>
 			</div>
 		</section>
@@ -105,15 +105,62 @@
 
 
 				</ul>
-				<a href="/portfolio/" class="recent-works__button button">посмотреть еще</a>
+				<a href="/portfolio/" class="recent-works__button button button_black">посмотреть все работы</a>
 			</div>
 		</section>
 		<!-- end recent-works-->
+
+		<!-- testimonials-->
+		<div class="testimonials">
+			<div class="testimonials__in">
+				<h2 class="testimonials__title">Отзывы</h2>
+				<ul class="testimonials__list">
+
+				<?php
+				$args = array(
+					'post_type' => 'testimonials',
+					'posts_per_page' => 3
+				);
+
+				$q = new WP_Query($args);;
+
+				?>
+
+				<?php while ( $q->have_posts()) : $q->the_post(); ?>
+
+					<li class="testimonials__item">
+						<div class="testimonials__avatar">
+						<?php if ( has_post_thumbnail() ) { ?>
+							<?php the_post_thumbnail(); ?>
+						<?php } ?>
+						</div>
+						<?php
+							$name = get_field('name');
+							$project = get_field('project');
+						 ?>
+						<div class="testimonials__name"><?php echo $name; ?></div>
+						<div class="testimonials__subject"><?php echo $project; ?></div>
+						<div class="testimonials__text">
+							<?php the_excerpt(); ?>
+						</div>
+					</li>
+
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
+
+				</ul>
+
+				<a href="/testimonials/" class="testimonials__button button button_black">посмотреть все отзывы</a>
+
+			</div>
+		</div>
+		<!-- end testimonials-->
+
 		<!-- begin call-to-action-->
 		<section id="section-4" class="call-to-action section">
 			<div class="call-to-action__in">
 				<h2 class="call-to-action__title">Закажите верстку вашего дизайна</h2>
-				<a href="mailto: gorlov35@gmail.com?subject=Заказать верстку" class="call-to-action__button button">напишите мне</a>
+				<a href="mailto: gorlov35@gmail.com?subject=Заказать верстку" class="call-to-action__button button button_white">напишите мне</a>
 			</div>
 		</section>
 		<!-- end call-to-action-->

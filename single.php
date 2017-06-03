@@ -20,14 +20,37 @@ get_header('inner'); ?>
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-		<div class="article">
-			<h1 class="article__title"><?php the_title(); ?></h1>
-			<!-- <div class="article__img"></div> -->
+		<article class="article article_table-content">
+				<h1 class="article__title"><?php the_title(); ?></h1>
+				<?php if ( function_exists('evc_buttons_code') ) { ?>
+				<div class="article__social">
+					<?php echo evc_buttons_code(); ?>
+				</div>
+				<?php } ?>
+			<div class="article__w">
+				<div class="article__w-w article__w-w_full">
+					<?php if (has_post_thumbnail()) { ?>
+					<div class="article__img">
+						<?php the_post_thumbnail(); ?>
+					</div>
+					<?php } ?>
 
-			<div class="article__text">
-				<?php the_content(); ?>
+					<div class="article__text">
+						<?php the_content(); ?>
+					</div>
+
+				</div>
+
+				<?php $tableContent = get_field( "table_of_content" );
+					if( $tableContent ) {
+				?>
+				<div class="article__table-contents">
+					<?php echo $tableContent; ?>
+				</div>
+				<?php } ?>
 			</div>
-		</div>
+
+		</article>
 
 
 
@@ -42,7 +65,7 @@ get_header('inner'); ?>
 	</div>
 	<!-- end sidebar -->
 
-	<div class="page__buffer"></div>
+<div class="page__buffer"></div>
 </main>
 
 <?php

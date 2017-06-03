@@ -1,0 +1,49 @@
+.testimonials
+	&__in
+		// padding-top 88px
+		padding-bottom 88px
+		@extends .in
+		text-align center
+	&__title
+		margin-bottom 33px
+		@extends .title-h2
+	&__list
+		font-size 0
+		text-align center
+	&__item
+		// margin-right 2%
+		margin auto
+		margin-bottom 66px
+		width 55%
+		display inline-block
+		vertical-align top
+		text-align left
+
+	&__avatar
+		margin auto
+		margin-bottom 20px
+		width 96px
+		height 96px
+		background url('../images/general/profile-icon-1.svg') 50%  / cover no-repeat
+		overflow hidden
+		border-radius 50%
+		img
+			max-width 100%
+			height auto
+	&__name
+		// margin-bottom 5px
+		@extends .title-h3
+		// height 64px
+	&__subject
+		margin-bottom 10px
+		@extends .title-h4
+		// height 64px
+		color lighten(#212121, 40)
+	&__text
+		@extends .wysiwyg
+		p
+			text-align left
+
+	&__button
+		@extends .button_black
+		background #212121

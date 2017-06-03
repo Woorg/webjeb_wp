@@ -9,11 +9,14 @@
 	a
 		position relative
 		border-bottom 1px solid lighten(#01579b, 60)
+		display block
 		font-family $ar
 		font-size 14px
 		text-transform uppercase
-
+		text-overflow ellipsis
+		white-space nowrap
 		color #01579b
+		overflow hidden
 		// letter-spacing tracking(150)
 		@extends .transition
 		&:hover

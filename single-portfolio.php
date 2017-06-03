@@ -24,6 +24,9 @@ get_header('inner'); ?>
 			<?php // the_post_navigation(); ?>
 
 			<h1 class="article__title"><?php the_title(); ?></h1>
+
+			<?php the_post_navigation(); ?>
+
 			<div class="article__img"><?php the_post_thumbnail(); ?></div>
 			<div class="portfolio-single">
 			<?php

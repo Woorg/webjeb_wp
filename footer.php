@@ -19,16 +19,16 @@
 
 			<ul class="footer__social social">
 				<li class="social__item social__item_youtube">
-					<a href="//goo.gl/qAALbI" class="social__link">Youtube</a>
+					<a href="<?php $youtube = the_field('youtube', 'option'); echo $youtube; ?>" class="social__link" target="_blank">Youtube</a>
 				</li>
 				<li class="social__item social__item_vk">
-					<a href="//goo.gl/p2rDM5" class="social__link">Vk</a>
+					<a href="<?php $vk = the_field('vk', 'option'); echo $vk; ?>" class="social__link" target="_blank">Vk</a>
 				</li>
 				<li class="social__item social__item_twitter">
-					<a href="//goo.gl/FLAoB5" class="social__link">Twitter</a>
+					<a href="<?php $twitter = the_field('twitter', 'option'); echo $twitter; ?>" class="social__link" target="_blank">Twitter</a>
 				</li>
 				<li class="social__item social__item_inst">
-					<a href="//goo.gl/rQfyAT" class="social__link">Instagram</a>
+					<a href="<?php $instagram = the_field('instagram', 'option'); echo $instagram; ?>" class="social__link" target="_blank">Instagram</a>
 				</li>
 			</ul>
 		</div>
@@ -39,6 +39,9 @@
 <!-- end footer-->
 
 <?php wp_footer(); ?>
+
+
+
 
 
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44026314 = new Ya.Metrika({ id:44026314, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44026314" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->

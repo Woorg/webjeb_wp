@@ -36,21 +36,6 @@ get_header('inner'); ?>
 
 		) ); ?>
 
-		<!-- <ul class="list-filter">
-			<li class="list-filter__item">
-				<a href="#link" class="list-filter__link">Все работы</a>
-			</li>
-			<li class="list-filter__item">
-				<a href="#link" class="list-filter__link">Адаптивная верстка</a>
-			</li>
-			<li class="list-filter__item">
-				<a href="#link" class="list-filter__link">Фиксированная верстка</a>
-			</li>
-			<li class="list-filter__item">
-				<a href="#link" class="list-filter__link">Интеграция с wordpress</a>
-			</li>
-		</ul>
-		 -->
 		<ul class="recent-works__list">
 
 			<?php if (have_posts()) : ?>

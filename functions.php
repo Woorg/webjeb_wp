@@ -159,9 +159,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
+/**
+ * Customr code
+ */
 
-// customr code
-
+// remove unnecessary words from title
 
 add_filter( 'get_the_archive_title', function ($title) {
 
@@ -186,3 +188,35 @@ add_filter( 'get_the_archive_title', function ($title) {
 	return $title;
 
 });
+
+// Add options page
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+
+// disable top bar
+
+add_filter('show_admin_bar', '__return_false');
+
+
+// excerpt
+
+// function webjeb_excerpt_length($length) {
+// 	return 100;
+// }
+// add_filter('excerpt_length', 'webjeb_excerpt_length');
+
+function webjeb_excerpt_more($more) {
+	global $post;
+	return '<div class="article__more"><a href="'. get_permalink($post->ID) . '" class="article__more-link">подробнее</a></div>';
+}
+add_filter('excerpt_more', 'webjeb_excerpt_more');
+
+
+
+
+
+

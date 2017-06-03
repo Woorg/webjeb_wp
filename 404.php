@@ -10,8 +10,13 @@
 get_header('inner'); ?>
 
 <main class="main">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<div class="breadcrumbs">','</div>');
+		}
+	?>
 
-	<?php get_search_form(); ?>
+	<h1 class='title-h2 title-404'>К сожалению, страница, которую вы ищете, не существует.</h1>
+
 	<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
 </main>
